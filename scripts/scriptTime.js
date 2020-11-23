@@ -29,13 +29,13 @@ function setBackground () {
 
     if(hour < 12) {
         // morning
-        document.body.style.backgroundColor = '#f2f2f2'
+        document.body.style.backgroundColor = ''
     } else if (hour < 18) {
         // afternoon
-        document.body.style.backgroundColor = '#f0dfdf';
+        document.body.style.backgroundColor = '';
     } else {
         // evening
-        document.body.style.backgroundColor = '#ddd'
+        document.body.style.backgroundColor = ''
     }
 }
     // run
