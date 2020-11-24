@@ -139,7 +139,68 @@ body {
     width: 100%;
 }
 
+/* CONVERTER */
+
+.converter {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px;
+}
+
+.convert-inner {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0, 81, 128);
+    border-radius: 3px;
+    background-image: url('/assets/1.jpg');
+    background-size: cover;
+    background-position: left;
+    height: 350px;
+    padding: 0 20px;
+}
+
+.convert-inner h4 {
+    font-weight: 500;
+    color: rgb(179, 55, 24);
+}
+
+.input {
+    width: 110px;
+    background: transparent;
+    font-family: monospace;
+    font-size: 16px;
+    border: 1px solid rgba(22, 22, 22, .5);
+    border-radius: 3px;
+}
+
+.output {
+    font-family: monospace;
+    font-size: 16px;
+    color: rgb(179, 55, 24);
+}
+
+/* HOMEBAR WITH INGREDIENTS */
+
+#ingredients{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px;
+    margin: 30px;
+    text-align: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.ingredient {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 184, .5);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
 /* RESPONSIVE */
+/* navigation and search page done */
 
 @media (max-width: 1200px) {
     .drinks {
