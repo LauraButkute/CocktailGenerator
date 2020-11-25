@@ -115,22 +115,24 @@ if (submit != null) {
     submit.addEventListener('submit', searchDrink)
 };
 
-drinks.addEventListener('click', e => {
-    const drinkInfo = e.path.find(item => {
-        if(item.classList) {
-            return item.classList.contains('drink-info')
-        } else {
-            return false;
+if (submit != null) {
+    drinks.addEventListener('click', e => {
+        const drinkInfo = e.path.find(item => {
+            if(item.classList) {
+                return item.classList.contains('drink-info')
+            } else {
+                return false;
+            }
+        });
+    
+        
+        if(drinkInfo) {
+            const drinkID = drinkInfo.getAttribute('data-drinkid');
+            getDrinkInfo(drinkID);
         }
     });
-    
-    if(drinkInfo) {
-        const drinkID = drinkInfo.getAttribute('data-drinkid');
-        getDrinkInfo(drinkID);
-    }
-});
+}
 
 hamburger.addEventListener('click', () => {
     navUL.classList.toggle('show');
 });
-

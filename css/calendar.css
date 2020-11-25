@@ -1,3 +1,10 @@
+/* TIME AND DATE */
+.time-date {
+	color: white;
+    margin: 20px;
+    font-size: large;
+}
+
 /* Calendar */
 
 .advent-24 {

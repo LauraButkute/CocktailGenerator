@@ -7,6 +7,7 @@ const single_cocktail_container = document.getElementById('single-cocktail-conta
 const drinksArray = []
 
 function getCocktail() {
+    
     for (cocktail of cocktailIds) {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktail}`)
             .then(res => res.json())
@@ -35,6 +36,9 @@ function addCocktailToDOM(dayNumber, drink) {
     </div>`
 }
 
+// FLIP CARD ON EXACT DATE
+
+
 //Event listener
 
 window.addEventListener('load', () => {
@@ -45,9 +49,12 @@ window.addEventListener('load', () => {
 function realTimeClock() {
     let rtClock = new Date();
 
+    let day = rtClock.getDate();
+    let month = rtClock.getMonth();
+    let year = rtClock.getFullYear();
+
     let hours = rtClock.getHours();
     let minutes = rtClock.getMinutes();
-    let seconds = rtClock.getSeconds();
 
     // AM PM
     let amPm = (hours < 12) ? "AM" : "PM"
@@ -55,15 +62,13 @@ function realTimeClock() {
     // 12 hour format
     hours = (hours > 12) ? hours - 12 : hours;
 
-    // Add zeros in front of hours minutes seconds
+    // Add zeros in front of minutes
     minutes = ("0" + minutes).slice(-2);
-    seconds = ("0" + seconds).slice(-2);
 
     // DISPLAY
-    document.getElementById('clock').innerHTML = hours + " : " + minutes + " : " + seconds + " " + amPm;
-
+    document.getElementById('date').innerHTML = year + ' / ' + month + ' / ' + day;
+    document.getElementById('clock').innerHTML = hours + " : " + minutes + " " + amPm;
     setTimeout(realTimeClock, 1000);
 }
-    // RUN
-
-    realTimeClock();
+// RUN
+realTimeClock();
