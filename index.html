@@ -7,6 +7,7 @@
     <link rel="icon" href="/assets/martini.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/calendar.css">
 </head>
 <body>
     <div class="nav">
@@ -22,11 +23,18 @@
             <li><a href="convert.html">Converter</a></li>
         </ul>
     </div>
-    <div>
-        <h1>JURGITA WILL MAKE THIS PAGE</h1>
+    <div class="container">
+        <!-- <div id="clock"></div> -->
+        <img class="advent-24" src="/assets/days/24.png" alt="24">
+        <h1>DAYS of COCKTAILS</h1>
+    
+        <div class="advent-calendar">
+            <div id="single-cocktail-container" class="drinks"></div>
+        </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/scripts/scriptTime.js"></script>
+    <script src="/scripts/calendar.js"></script>
     <script src="/scripts/script.js"></script>
 </body>
 </html>

@@ -59,6 +59,16 @@ body {
     margin-bottom: 20px;
 }
 
+.container h1, h2 {
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: 400;
+}
+
+.container h2 {
+    font-size: 20px;
+}
+
 .flex {
     display: flex;
 }
@@ -197,7 +207,6 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 }
-
 
 /* RESPONSIVE */
 /* navigation and search page done */
