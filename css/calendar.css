@@ -5,12 +5,11 @@
     font-size: large;
 }
 
-/* Calendar */
+/* CALENDAR */
 
 .advent-24 {
     width: 10%;
 }
-
 .advent-calendar .drinks{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -19,14 +18,13 @@
 .days-img {
 	width: 210px;
 	height: 300px;
-	
 }
 .cocktail {
 	width: 210px;
 	height: 300px;
 }
 
-/* Flip the cards */
+/* FLIP THE CARDS */
 
 .flip-card {
     cursor: pointer;
@@ -44,7 +42,7 @@
 	transform-style: preserve-3d;
 	box-shadow: -5px 5px 5px #aaa;
 }
-.flip-card:hover .flip-card-inner {
+.flip-card-active:hover .flip-card-inner {
 	transform: rotateY(180deg);
 } 
 .card-front, .card-back {
@@ -55,12 +53,20 @@
 	backface-visibility: hidden;
 }
 .card-back {
-    transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
   }
+.card-back h3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
 
-/* Responsive Web Design */
-
-/* RESPONSIVE */
+/* WEB RESPONSIVE */
 
 @media (max-width: 1200px) {
     .advent-calendar .drinks {

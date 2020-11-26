@@ -29,6 +29,13 @@ function searchDrink(e) {
                         <img src="/assets/1.jpg">
                     </div>`;
                 resultHeading.innerHTML = `<h2>No results for '${term}'</h2>`
+            }
+            else if(term.length < 3) {
+                drinks.innerHTML = `
+                    <div class='no-result'>
+                        <img src="/assets/1.jpg">
+                    </div>`;
+                resultHeading.innerHTML = `<h2>No results for '${term}'</h2>`
             } else {
                 drinks.innerHTML = data.drinks.map(drink =>
                     `<div class='drink'>
@@ -44,7 +51,7 @@ function searchDrink(e) {
         // CLEAR SEARCH AREA
         search.value = '';
     } else {
-        alert('Please fill the search area');
+        resultHeading.innerHTML = `<h2>Fill in the search area!</h2>`
     }
 }
 // GETTING INFO OF COCKTAIL ON CLICK
@@ -91,47 +98,25 @@ function addDrinkToDOM(drink) {
         elmnt.scrollIntoView();
 }
 
-// CONVERTER FROM OZ --> ML & OZ --> CL
-function fluidConverter(valNum) {
-    document.getElementById("outputMililitres").innerHTML = valNum * 29.5735296;
-    document.getElementById("outputCentilitres").innerHTML = valNum * 2.95735296;
-}
-
-// CONVERTER FROM ML --> OZ & ML --> CL
-function fluidConverter1(valNum) {
-    document.getElementById("outputOunces1").innerHTML = valNum / 29.5735296;
-    document.getElementById("outputCentilitres1").innerHTML = valNum / 10;
-}
-
-// CONVERTER FROM CL --> ML & CL --> OZ
-function fluidConverter2(valNum) {
-    document.getElementById("outputMililitres2").innerHTML = valNum * 10;
-    document.getElementById("outputOunces2").innerHTML = valNum / 2.95735296;
-}
-
 // EVENT LISTENERS
-
 if (submit != null) {
     submit.addEventListener('submit', searchDrink)
 };
 
-if (submit != null) {
-    drinks.addEventListener('click', e => {
-        const drinkInfo = e.path.find(item => {
-            if(item.classList) {
-                return item.classList.contains('drink-info')
-            } else {
-                return false;
-            }
-        });
-    
-        
-        if(drinkInfo) {
-            const drinkID = drinkInfo.getAttribute('data-drinkid');
-            getDrinkInfo(drinkID);
+drinks.addEventListener('click', e => {
+    const drinkInfo = e.path.find(item => {
+        if(item.classList) {
+            return item.classList.contains('drink-info')
+        } else {
+            return false;
         }
     });
-}
+    
+    if(drinkInfo) {
+        const drinkID = drinkInfo.getAttribute('data-drinkid');
+        getDrinkInfo(drinkID);
+    }
+});
 
 hamburger.addEventListener('click', () => {
     navUL.classList.toggle('show');

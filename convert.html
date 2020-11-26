@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Converter</title>
+    <title>Fluid Converter</title>
     <link rel="icon" href="/assets/martini.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <!-- NAVIGATION -->
     <div class="nav">
         <img class='logo' src='/assets/6.jpg' alt='logo'>
         <button class="hamburger" id="hamburger">
@@ -22,8 +23,9 @@
             <li><a href="convert.html">Converter</a></li>
         </ul>
     </div>
+    <!-- CONVERTER-1 -->
     <div class="converter">
-        <div class="convert-inner">
+        <div class="convert-inner" id="ounc">
             <h4>convert ounces to mililitres and centilitres</h3>
             <p>
                 <label>oz</label>
@@ -34,7 +36,8 @@
               <p>cl <span class="output" id="outputCentilitres"></span></p>
             
         </div>
-        <div class="convert-inner">
+        <!-- CONVERTER-2 -->
+        <div class="convert-inner" id="mil">
             <h4>convert mililitres to ounces and centilitres</h3>
             <p>
                 <label>ml</label>
@@ -44,7 +47,8 @@
               <p>oz <span class="output" id="outputOunces1"></span></p>
               <p>cl <span class="output" id="outputCentilitres1"></span></p>
         </div>
-        <div class="convert-inner">
+        <!-- CONVERTER-3 -->
+        <div class="convert-inner" id="centi">
             <h4>convert centilitres to mililitres and ounces</h3>
             <p>
                 <label>cl</label>
@@ -55,7 +59,7 @@
               <p>oz <span class="output" id="outputOunces2"></span></p>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/scripts/script.js"></script>
+    
+    <script src="/scripts/convert.js"></script>
 </body>
 </html>

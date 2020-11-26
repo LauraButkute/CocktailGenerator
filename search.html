@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Find a Cocktail</title>
-        <link rel="icon" href="/assets/martini.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <div class="nav">
-            <img class='logo' src='/assets/6.jpg' alt='logo'>
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class='nav-ul' id='nav-ul'>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="search.html">Cocktail finder</a></li>
-                <li><a href="homebar.html">Home bar</a></li>
-                <li><a href="popular.html">Popular</a></li>
-                <li><a href="convert.html">Converter</a></li>
-            </ul>
-        </div>
-        <div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Cocktail</title>
+    <link rel="icon" href="/assets/martini.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <img class='logo' src='/assets/6.jpg' alt='logo'>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class='nav-ul' id='nav-ul'>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Cocktail finder</a></li>
+            <li><a href="homebar.html">Home bar</a></li>
+            <li><a href="popular.html">Popular</a></li>
+            <li><a href="convert.html">Converter</a></li>
+        </ul>
+    </div>
+    <!-- MAIN -->
     <div class="container">
         <h1>Find a Cocktail</h1>
+        <!-- SEARCH FORM -->
         <div class="flex">
             <form class="flex" id="submit">
                 <input type="text" id="search" placeholder="Enter cocktail name">
                 <button class="btn-search" type="submit"><i class="fa fa-search" aria-hidden="true" style="color: white;"></i></button>
             </form>
         </div>
-
+        <!-- DISPLAY COCKTAILS FETCHED FROM API -->
         <div id="result-heading"></div>
         <div id="drink-name" class="drinks"></div>
         <div id="single-drink" class="single-drink"></div>
-
     </div>
-
+    
     <script src="/scripts/script.js"></script>
-    <script src="/scripts/homebar.js"></script>
 </body>
 </html>

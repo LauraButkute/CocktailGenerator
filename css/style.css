@@ -5,9 +5,10 @@ body {
     color: white;
 }
 /* Style NAVIGATION */
+
 .nav{
     background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     font-size: 16px;
     font-weight: 400;
     display:flex;
@@ -15,7 +16,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-ul {
     list-style: none;
     display: flex;
@@ -23,27 +23,22 @@ body {
     align-items: center;
     padding: 10px 20px;
 }
-
 .nav-ul li a {
     display: inline-block;
     text-decoration: none;
     color: #130f0f;
     padding: 0 20px;
 }
-
 .nav-ul a:hover {
     font-size: 17px;
     font-weight: 500;
 }
-
 .logo {
     width: 80px;
 }
-
 .logo img {
     width: 100%;
 }
-
 .hamburger {
     background-color: transparent;
     border: 0;
@@ -51,9 +46,11 @@ body {
     cursor: pointer;
     font-size: 20px;
     display: none;
+    margin-right: 5px;
 }
 
 /* CONTAINER FOR ALL HTML PAGES TO BE CENTER ALIGNED */
+
 .container {
     margin: auto;
     max-width: 90%;
@@ -64,45 +61,40 @@ body {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .container h1, h2 {
     font-size: 40px;
     font-style: oblique;
     font-weight: 400;
 }
-
 .container h2 {
     font-size: 20px;
 }
 
 /* SUBMIT FORM */
+
 .flex {
     display: flex;
 }
-
 .flex input {
     background: transparent;
     border: 1px solid white;
     border-right: none;
     color: white;
 }
-
 .flex .btn-search {
     background: transparent;
     border: solid 1px white;
     border-left: none;
 }
-
 ::placeholder {
     color: white;
     opacity: .8;
 }
-
 .nav .fa .fa-search {
     color: white;
 }
-/* END SUBMIT FORM */
 
+/* COCKTAILS DISPLAY AND INFO */
 
 .drinks {
     display: grid;
@@ -110,20 +102,17 @@ body {
     grid-gap: 20px;
     margin-top: 20px;;
 }
-
 .drink {
     cursor: pointer;
     position: relative;
     height: 200px;
     width: 200px;
 }
-
 .drink img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
-
 .drink-info {
     color: white;
     text-transform: uppercase;
@@ -139,16 +128,13 @@ body {
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
 }
-
 .drink:hover .drink-info {
     opacity: 1;
 }
-
 .drink:hover img {
     transform: scale(1.04);
     transition: all .4s ease;
 }
-
 .single-drink {
     margin: 25px;
     display: flex;
@@ -161,7 +147,6 @@ body {
     border: 1px solid white;
     border-radius: 5px;
 }
-
 .single-drink-info {
     padding: 0 30px;
     text-align: left;
@@ -171,7 +156,6 @@ body {
     list-style: none;
     padding-left: 0;
 }
-
 .no-result {
     height: 200px;
     width: 200px;;
@@ -185,26 +169,32 @@ body {
 .converter {
     display: flex;
     justify-content: space-between;
-    margin: 60px;
+    margin: 60px 40px;
 }
-
 .convert-inner {
+    width: 25%;
     display: flex;
     flex-direction: column;
     border: 1px solid white;
     border-radius: 3px;
-    background-image: url('/assets/1.jpg');
+    background-position: center;
     background-size: cover;
-    background-position: left;
     height: 350px;
     padding: 0 20px;
 }
-
+#mil {
+    background-image: url('/assets/0.jpg');
+}
+#ounc {
+    background-image: url('/assets/7.jpg');
+}
+#centi {
+    background-image: url('/assets/2.jpg');
+}
 .convert-inner h4 {
     font-weight: 500;
     color: rgb(126, 31, 31);
 }
-
 .input {
     width: 110px;
     background: transparent;
@@ -213,26 +203,29 @@ body {
     border: 1px solid rgba(22, 22, 22, .5);
     border-radius: 3px;
 }
-
 .output {
+    margin-left: 3px;
     font-family: monospace;
-    font-size: 16px;
-    color: rgb(179, 55, 24);
+    font-size: x-large;
+    font-weight: bold;
+    color:black;
+
 }
 
 /* HOMEBAR WITH INGREDIENTS */
 
 #ingredients{
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(13, 1fr);
     grid-gap: 5px;
     margin: 30px;
     text-align: center;
     align-items: center;
-    font-size: 10px;
+    font-size: 8px;
 }
-
 .ingredient {
+    width: 76px;
+    height: 38px;
     border-radius: 3px;
     background-color: rgba(255, 255, 184, .5);
     text-transform: uppercase;
@@ -240,14 +233,23 @@ body {
 }
 
 /* RESPONSIVE */
-/* navigation and search page done */
 
 @media (max-width: 1200px) {
     .drinks {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+    #ingredients {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    #ingredients {
+        grid-template-columns: repeat(11, 1fr);
+    }
+}
+@media (max-width: 930px) {
     .drinks {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -260,33 +262,53 @@ body {
     .single-drink-info {
         text-align: center;
     }
+    #ingredients {
+        grid-template-columns: repeat(9, 1fr);
+    }
 }
-
+@media (max-width: 767px) {
+    #ingredients {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .converter {
+        flex-direction: column;
+        align-items: center;
+    }
+    .convert-inner {
+        margin-bottom: 20px;
+        width: 35%;
+    }
+}
 @media (max-width: 700px) {
     .nav-ul {
         display: none;
         flex-direction: column;
     }
-
     .nav-ul.show {
         display: flex;
         width: 100%;
     }
-
     .hamburger {
         display: block;
     }
     .drinks {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .drink {
         height: 200px;
         width: 200px;
     }
+    .single-drink .main-image {
+        width: 90%;
+    }
+    #ingredients {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .convert-inner {
+        width: 50%;
+    }
 }
-
-@media (max-width: 500px) {
+@media (max-width: 515px) {
     .drinks {
         grid-template-columns: 1fr;
     }
@@ -294,5 +316,18 @@ body {
         height: 250px;
         width: 250px;
     }
-    
+    #ingredients {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (max-width: 415px) {
+    #ingredients {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .converter{
+        margin: 40px 40px;
+    }
+    .convert-inner {
+        width: 75%;
+    }
 }
