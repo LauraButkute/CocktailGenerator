@@ -32,7 +32,8 @@ function getCocktail() {
         for(cocktailId of cocktailIds){
         dayNumber += 1
         var d = new Date().getDate();
-        // var d = 2;
+        // comment 34 line and uncomment 36 line to see how it would work in December
+        // var d = 10;
         if (dayNumber <= d) {
             addCocktailToDOM(dayNumber,drinksMap.get(cocktailId), true);  
         } 

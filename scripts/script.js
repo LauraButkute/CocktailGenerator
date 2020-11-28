@@ -51,7 +51,11 @@ function searchDrink(e) {
         // CLEAR SEARCH AREA
         search.value = '';
     } else {
-        resultHeading.innerHTML = `<h2>Fill in the search area!</h2>`
+        drinks.innerHTML = `
+            <div class='no-result'>
+                <img src="/assets/3.jpg">
+            </div>`;
+        resultHeading.innerHTML = `<h2>Please fill search area!</h2>`
     }
 }
 // GETTING INFO OF COCKTAIL ON CLICK

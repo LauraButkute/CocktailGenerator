@@ -215,28 +215,24 @@ body {
 .popular {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;    
+    margin-bottom: 30px;
+ 
 }
 .popular .container2 {    
-    position: relative;
     width: 1000px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     border: 1px solid white;
     border-radius: 5px;
 } 
 .popular .container2 .card {
-    position: relative;
     max-width: 450px;
     margin: 10px;
     padding: 15px;
     display: flex;
 }
 .popular .container2 .card .imgBx {
-    max-width: 150px;
     flex: 0 0 150px;
 }
 .popular .container2 .card .imgBx img {
@@ -277,10 +273,22 @@ body {
     #ingredients {
         grid-template-columns: repeat(12, 1fr);
     }
+
+    .popular .container2 {
+        flex-direction: column;
+        width: 70%;
+    }
+    .popular .container2 .card .imgBx img {
+        margin-top: 40px;
+    }
+
 }
 @media (max-width: 1000px) {
     #ingredients {
         grid-template-columns: repeat(11, 1fr);
+    }
+    .popular .container2 .card {
+        display: block;
     }
 }
 @media (max-width: 930px) {
@@ -352,6 +360,12 @@ body {
     }
     #ingredients {
         grid-template-columns: repeat(5, 1fr);
+    }
+    .popular .container2 {
+        border: none;
+    }
+    .popular .container2 h2 {
+        font-size: 30px;
     }
 }
 @media (max-width: 415px) {
