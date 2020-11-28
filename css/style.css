@@ -209,7 +209,41 @@ body {
     font-size: x-large;
     font-weight: bold;
     color:black;
+}
 
+/* POPULAR DRINKS PAGE */
+.popular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;    
+}
+.popular .container2 {    
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    border-radius: 5px;
+} 
+.popular .container2 .card {
+    position: relative;
+    max-width: 450px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+}
+.popular .container2 .card .imgBx {
+    max-width: 150px;
+    flex: 0 0 150px;
+}
+.popular .container2 .card .imgBx img {
+    max-width: 100%;
+}
+.popular .container2 .card .content {
+    margin-left: 20px;
 }
 
 /* HOMEBAR WITH INGREDIENTS */
